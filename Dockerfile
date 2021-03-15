@@ -49,7 +49,7 @@ RUN apt-get update && apt-get install -y nodejs yarn
 
 #安装composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
-    && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
+    && php composer-setup.php --install-dir=/bin --filename=composer \
     && php -r "unlink('composer-setup.php');" \
     && composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 
